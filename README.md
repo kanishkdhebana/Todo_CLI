@@ -14,13 +14,13 @@ A simple and effective Command-Line Interface (CLI) application to manage tasks.
 - Python 3.6 or higher
 - `click` library
 
-## Installation
+## Installation and Setup
 
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/task-manager-cli.git
-    cd task-manager-cli
+    git clone https://github.com/kanishkdhebana/Todo_CLI
+    cd Todo_CLI
     ```
 
 2. **Install the required packages:**
@@ -31,12 +31,31 @@ A simple and effective Command-Line Interface (CLI) application to manage tasks.
     pip install click
     ```
 
-3. **Make the script executable (optional):**
+3. **Make the script executable:**
 
     If you want to run the script directly:
 
     ```bash
-    chmod +x task_manager.py
+    chmod +x todo.py
+    ```
+
+4. **Add alias to .bashrc or .zshrc:**
+
+    Add this line to `.bashrc` or `.zshrc` to create a convenient alias for the script:
+
+    ```bash
+    alias todo='python /path/to/todo.py'
+    ```
+
+    Replace `/path/to/todo.py` with the actual path to the `todo.py` file.
+
+5. **Reload your shell configuration:**
+
+    After adding the alias, reload your shell configuration to apply the changes:
+
+    ```bash
+    source ~/.bashrc   # For bash users
+    source ~/.zshrc    # For zsh users
     ```
 
 ## Usage
@@ -46,4 +65,4 @@ A simple and effective Command-Line Interface (CLI) application to manage tasks.
 To add a new task, use the `add` command followed by the task description and an optional priority flag.
 
 ```bash
-python task_manager.py add "Buy groceries" --priority h
+todo add "Buy groceries" --priority h
