@@ -1,4 +1,4 @@
-# Task Manager CLI
+# Todo CLI
 
 A simple and effective Command-Line Interface (CLI) application to manage tasks. This Task Manager allows you to add, list, complete, and remove tasks with varying priorities. Tasks are stored in a JSON file, making it easy to persist and manage your tasks over time.
 
