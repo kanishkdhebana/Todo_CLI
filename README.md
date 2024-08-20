@@ -60,9 +60,66 @@ A simple and effective Command-Line Interface (CLI) application to manage tasks.
 
 ## Usage
 
+Once you have set up the alias, you can use the `todo` command to interact with the Task Manager CLI.
+
 ### Adding a Task
 
-To add a new task, use the `add` command followed by the task description and an optional priority flag.
+To add a new task, use the `add` command followed by the task description and an optional priority flag:
+
+```bash
+todo add "Buy groceries" -p h
+```
+
+or
 
 ```bash
 todo add "Buy groceries" --priority h
+```
+This command adds a new task "Buy groceries" with High priority.
+
+### Listing All Tasks
+
+To list all tasks, use the list command:
+
+```bash
+todo list
+```
+
+### Completing a Task
+
+To mark a task as complete, use the complete command followed by the task index:
+
+```bash
+todo complete 1
+```
+This will mark the first task as complete.
+
+### Removing a Task
+
+To remove a task, use the remove command followed by the task index:
+
+```bash
+todo remove 1
+```
+This will remove the first task from your list.
+
+### Priority Levels
+
+- Low (l): Tasks with low importance.
+- Medium (m): Tasks with medium importance. (Default)
+- High (h): Tasks with high importance.
+
+### File Structure
+
+- task_manager.py: The main Python script containing the task manager CLI.
+- tasks.json: The JSON file where tasks are stored.
+
+### Error Handling
+
+- File Not Found: If the tasks.json file is not found, a new file is created automatically.
+- Invalid Task Index: If you try to complete or remove a task that does not exist, an error message will be displayed.
+
+### Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an issue.
+
